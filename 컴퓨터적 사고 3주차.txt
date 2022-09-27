@@ -1,0 +1,105 @@
+3주차 실습
+1. 32inch는 몇 cm?
+32*2.54
+81.28
+
+2. end 파라미터
+print("Hello", end='\t')
+print("Powerful python", end='\n')
+print("Fun python", end='')
+
+Hello	Powerful python
+Fun python
+
+3. sep 파라미터
+print("Hello", "Easy", "Python", sep=" ")
+print("Hello", "Easy", "Python", sep="")
+print("Hello", "Easy", "Python", sep="\t")
+print("Hello", "Easy", "Python", sep=",")
+
+Hello Easy Python
+HelloEasyPython
+Hello	Easy	Python
+Hello,Easy,Python
+
+----------------------------------------------
+
+4. 양식문자 1개 활용
+
+name = "이준우"
+age = 20
+department = "전자정부공학부"
+
+print("내 이름은 %s입니다." %name)
+print("나는 %d살 입니다" %age)
+print("저는 숭실대학교 %s 소속입니다." %department)
+
+내 이름은 이준우입니다.
+나는 20살 입니다
+나는 숭실대학교 전자정부공학부 소속입니다.
+
+5. 양식문자 2개 활용
+
+name = "이준우"
+age = 20
+department = "전자정부공학부"
+
+print("내 이름은 %s입니다. 저는 %d살 입니다. 저는 숭실대학교 %s 소속입니다." %(name, age, department))
+
+내 이름은 이준우입니다. 저는 20살 입니다. 저는 숭실대학교 전자정부공학부 소속입니다.
+
+5. 두 정수의 사칙연산 양식문자 활용
+
+a = int(input("첫 번째 정수 입력: "))
+b = int(input("두 번째 정수 입력: "))
+
+print("%d + %d = %d" %(a, b, a+b))
+print("%d - %d = %d" %(a, b, a-b))
+print("%d * %d = %d" %(a, b, a*b))
+print("%d / %d = %.3f" %(a, b, a/b))
+
+
+6. 캘린더
+import calendar
+calendar.prmonth(2022, 3)
+
+7. 번역기
+import webbrowser
+text = input("문장 입력 : ")
+url = "https://translate.google.co.kr/#ko/en/" + text
+webbrowser.open( url )
+url = "https://translate.google.co.kr/#ko/ja/" + text
+webbrowser.open_new( url )
+url = "https://translate.google.co.kr/#ko/zh-CN/" + text
+webbrowser.open_new( url )
+
+
+
+과제 1번 빼고 print 하나만 사용해서 1문장으로 만들기
+
+1. 양식문자를 사용하여 이름, 학번, 학과를 출력하는 프로그램을 작성하시오.
+2. 1번 문제를 print 함수를 한개만 사용하여 프로그램을 작성하시오.(양식문자 사용)
+3. 두 정수를 입력받아 사칙연산을 계산하는 프로그램을 양식문자를 사용하여 작성하시오.
+4. input함수를 사용하여 좋아하는 음식, 좋아하는 색, 좋아하는 동물을 입력받아 양식문자를 사용하여 작성하시오.(문제 변경가능)
+5. 태어난 연도를 입력받아 현재나이와 내년나이 구하는 프로그램을 작성하시오.(양식문자 사용)
+6. input 함수를 받아서 개인정보 출력하는 프로그램을 작성하시오.(2번에 작성한 코드를 참고 및 양식문자 사용)
+
+---------------------------------------------------------------------------------
+1. 양식문자와 sep파라미터 같이쓰기
+a = input("좋아하는 음식은? : ")
+b = input("좋아하는 색은? : ")
+c = input("좋아하는 동물은?: ")
+
+
+print("좋아하는 음식은 %s입니다." %a,"좋아하는 색은 %s입니다." %b, "좋아하는 동물은 %s입니다." %c, sep="\t")
+
+좋아하는 음식은? : 족발
+좋아하는 색은? : 보라색
+좋아하는 동물은?: 시베리안 허스키
+좋아하는 음식은 족발입니다.	좋아하는 색은 보라색입니다.	좋아하는 동물은 시베리안 허스키입니다.
+          
+
+
+
+
+
