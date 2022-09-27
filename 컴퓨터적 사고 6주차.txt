@@ -1,0 +1,56 @@
+1. 다섯 명 학생의 성적 합계와 평균
+score = [ ]
+for i in range(5):
+    number = int(input("성적을 입력해주세요:"))
+    score.append(number)
+
+sum = 0
+for i in range(5):
+    sum += score[i]
+print("합계: " , sum)
+print("평균: ", sum/5)
+
+2. 인덱싱, 슬라이싱
+a=[1 ,2 ,3 ,4 ,5, 6, 7, 8]
+print(a[1:6])
+print(a[3:])
+print(a[::-1])
+
+[2, 3, 4, 5, 6]
+[4, 5, 6, 7, 8]
+[8, 7, 6, 5, 4, 3, 2, 1]
+
+3. 원의 넓이와 둘레 구하기
+def circumference(r):
+    pi = 3.14
+    c_len = 2 * pi * r
+    print("반지름이 %d인 원의 둘레는 %.2f입니다." %(r,c_len))
+
+def circle(r):
+    pi = 3.14
+    c_area = r * pi * r
+    print("반지름이 %d인 원의 넓이는 %.2f입니다." %(r,c_area))
+
+circumference(10); circle(10)
+circumference(15); circle(15)
+circumference(20); circle(20)
+
+...................................................................................................................
+
+def circumference(r):
+    pi = 3.14
+    c_len = 2 * pi * r
+    print("반지름이 %d인 원의 둘레는 %.2f입니다." %(r,c_len))
+    return circumference
+
+def circle(r):
+    pi = 3.14
+    c_area = r * pi * r
+    print("반지름이 %d인 원의 넓이는 %.2f입니다." %(r,c_area))
+    return circle
+
+n = int(input("원의 반지름 입력"))
+result = circumference(n)
+result2 = circle(n)
+print("원의 둘레: %.2f" % result)
+print("원의 넓이: %.2f" % result2)
